@@ -1,24 +1,31 @@
 {
   "name": "integrate-angular",
   "version": "0.0.0",
+  "main": "main.js",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "serve": "ng serve",
+    "start": "electron .",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "start:electron": "ng build --base-href ./ && electron ."
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~11.0.4",
+    "@angular/animations": "^11.0.4",
+    "@angular/cdk": "^11.0.3",
     "@angular/common": "~11.0.4",
     "@angular/compiler": "~11.0.4",
     "@angular/core": "~11.0.4",
+    "@angular/fire": "^6.1.4",
     "@angular/forms": "~11.0.4",
+    "@angular/material": "^11.0.3",
     "@angular/platform-browser": "~11.0.4",
     "@angular/platform-browser-dynamic": "~11.0.4",
     "@angular/router": "~11.0.4",
+    "firebase": "^8.2.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
@@ -30,6 +37,7 @@
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
+    "electron": "^11.1.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.1.0",
